@@ -1,0 +1,145 @@
+@use "global" as *;
+
+.footer {
+  padding: rem(48) rem(15) rem(56);
+  background: $color-gr;
+  @include mq('md') {
+    padding: rem(80) rem(180);
+  }
+}
+
+.footer_head {
+  @include mq('md') {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer_head a img{
+  width: rem(120);
+}
+
+.footer_logo {
+  margin-bottom: rem(16);
+}
+
+.footer_sns {
+  display: flex;
+  margin-bottom: rem(40);
+  @include mq('md') {
+    margin-left: rem(40);
+    margin-bottom: 0;
+  }
+}
+
+.footer_facebook {
+  width: rem(19.5);
+  margin-right: rem(16);
+  @include mq('md') {
+    width: rem(26);
+  }
+}
+
+.footer_instagram {
+  width: rem(19.5);
+  @include mq('md') {
+    width: rem(26);
+  }
+}
+
+.footer_nav {
+  display: flex;
+  justify-content: space-between;
+  @include mq('md') {
+
+  }
+}
+
+.footer_nav_left, .footer_nav_right {
+    @include mq('md') {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+}
+
+.footer_nav_left {
+  @include mq('md') {
+    margin-right: rem(60);    
+  }
+}
+
+.footer_nav_right {
+  @include mq('md') {
+    margin-left: rem(60);    
+  }
+}
+
+.footer_nav_group {
+  margin-bottom: rem(40);
+}
+
+.footer_nav_head {
+  margin-bottom: rem(24);
+}
+
+.footer_nav_head::before {
+  content: '';
+  display: inline-block;
+  background: url(../images/common/footer_starfish.png) no-repeat;
+  background-size: contain;
+  width: rem(18);
+  height: rem(18);
+  margin-right: rem(4);
+}
+
+.footer_nav_head a {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(rem(18) / rem(16));
+  color: $color-wh;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer_nav_body li {
+  margin-bottom: rem(24);
+}
+
+.footer_nav_body li a {
+  font-size: rem(16);
+  line-height: calc(rem(18) / rem(16));
+  color: $color-wh;
+  padding-left: rem(26);
+}
+
+.footer_copy {
+  text-align: center;
+}
+
+.footer_copy small {
+  font-size: rem(12);
+  line-height: calc(rem(18) / rem(12));
+  font-family: $en-base-font-family;
+  font-weight: $regular;
+  color: $color-wh;
+  @include mq('md') {
+    font-size: rem(14);
+    line-height: calc(rem(18) / rem(14));
+  }
+}
+
+//モバイルのみ表示
+.only-sp {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.only-pc {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}

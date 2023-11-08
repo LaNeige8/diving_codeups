@@ -1,0 +1,42 @@
+@use "global" as *;
+
+
+.kv {
+  position: relative;
+}
+
+.kv_contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  color: $color-wh;
+  text-align: center;
+}
+
+.kv_title {
+  font-size: rem(40);
+  font-weight: $regular;
+  line-height: calc(rem(100) / rem(80));
+  letter-spacing: 0.54em;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  @include mq('md') {
+    font-size: rem(80);
+  }
+}
+
+.kv_text {
+  font-size: rem(20);
+  font-family: $en-base-font-family;
+}
+
+
+/* Swiper
+------------------------------------------------------*/
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
