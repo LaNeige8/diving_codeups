@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .header {
   background: rgba(13,41,54,0.68);
   position: fixed;
@@ -13,9 +12,6 @@
   @include mq('md') {
     height: rem(90);
   }
-
-
-
 }
 
 .header_inner {
@@ -143,8 +139,6 @@
   margin-top: rem(24);
 }
 
-
-
 /* PC nav
 ------------------------------------------------------*/
 .header_nav_pc {
@@ -166,7 +160,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+  }
+}
 
+.header_lists_pc a::after {
+  @include mq('md') {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: rem(-10);
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: rem(2);
+    background: $color-wh;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+  }
+}
+
+
+.header_lists_pc a:hover::after {
+  @include mq('md') {
+    transform: scale(1, 1);
   }
 }
 

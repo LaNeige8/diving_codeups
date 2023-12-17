@@ -8,22 +8,22 @@
   }
 }
 
-.footer_head {
+.footer__head {
   @include mq('md') {
     display: flex;
     align-items: center;
   }
 }
 
-.footer_head a img{
+.footer__head a img{
   width: rem(120);
 }
 
-.footer_logo {
+.footer__logo {
   margin-bottom: rem(16);
 }
 
-.footer_sns {
+.footer__sns {
   display: flex;
   margin-bottom: rem(40);
   @include mq('md') {
@@ -32,7 +32,7 @@
   }
 }
 
-.footer_facebook {
+.footer__facebook {
   width: rem(19.5);
   margin-right: rem(16);
   @include mq('md') {
@@ -40,51 +40,47 @@
   }
 }
 
-.footer_instagram {
+.footer__instagram {
   width: rem(19.5);
   @include mq('md') {
     width: rem(26);
   }
 }
 
-.footer_nav {
+.footer__nav {
   display: flex;
   justify-content: space-between;
-  @include mq('md') {
-
-  }
 }
 
-.footer_nav_left, .footer_nav_right {
+.footer__nav-left, .footer__nav-right {
     @include mq('md') {
       display: flex;
       justify-content: space-between;
       width: 100%;
   }
-
 }
 
-.footer_nav_left {
+.footer__nav-left {
   @include mq('md') {
     margin-right: rem(60);    
   }
 }
 
-.footer_nav_right {
+.footer__nav-right {
   @include mq('md') {
     margin-left: rem(60);    
   }
 }
 
-.footer_nav_group {
+.footer__nav__group {
   margin-bottom: rem(40);
 }
 
-.footer_nav_head {
+.footer__nav__head {
   margin-bottom: rem(24);
 }
 
-.footer_nav_head::before {
+.footer__nav__head::before {
   content: '';
   display: inline-block;
   background: url(../images/common/footer_starfish.png) no-repeat;
@@ -94,31 +90,49 @@
   margin-right: rem(4);
 }
 
-.footer_nav_head a {
+.footer__nav__head a {
   font-size: rem(16);
   font-weight: $bold;
   line-height: calc(rem(18) / rem(16));
   color: $color-wh;
   display: inline-block;
   vertical-align: top;
+  @include mq('md') {
+    transition: all .3s ease;
+  }
 }
 
-.footer_nav_body li {
+.footer__nav__head a:hover {
+  @include mq('md') {
+    opacity: .7;
+  }
+}
+
+.footer__nav__body li {
   margin-bottom: rem(24);
 }
 
-.footer_nav_body li a {
+.footer__nav__body li a {
   font-size: rem(16);
   line-height: calc(rem(18) / rem(16));
   color: $color-wh;
   padding-left: rem(26);
+  @include mq('md') {
+    transition: all .3s ease;
+  }
 }
 
-.footer_copy {
+.footer__nav__body li a:hover {
+  @include mq('md') {
+    opacity: .7;
+  }
+}
+
+.footer__copy {
   text-align: center;
 }
 
-.footer_copy small {
+.footer__copy small {
   font-size: rem(12);
   line-height: calc(rem(18) / rem(12));
   font-family: $en-base-font-family;
@@ -127,19 +141,5 @@
   @include mq('md') {
     font-size: rem(14);
     line-height: calc(rem(18) / rem(14));
-  }
-}
-
-//モバイルのみ表示
-.only-sp {
-  @include mq("md") {
-    display: none;
-  }
-}
-
-.only-pc {
-  display: none;
-  @include mq("md") {
-    display: block;
   }
 }

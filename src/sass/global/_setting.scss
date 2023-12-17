@@ -19,9 +19,7 @@ $jp-second-font-family: 'Noto Serif JP', serif;
 
 // ※検証ツールでしっかり反映されているか確認する
 
-body {
-  font-family: $jp-base-font-family;
-}
+
 
 // フォントウェイト
 $regular: 300;
@@ -36,5 +34,10 @@ $bold: 700;
 $color-gr: #408F95;
 $color-wh: #fff;
 $color-bl: #0D2936;
+$color-lgr: #DDF0F1;
 
+body {
+  font-family: $jp-base-font-family;
+  color: $color-bl;
+}
 
